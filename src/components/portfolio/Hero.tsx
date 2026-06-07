@@ -68,10 +68,8 @@ export function Hero() {
           {profile.intro}
         </motion.p>
 
-
-
-
         <motion.div variants={item} className="mt-10">
+
           <button
             onClick={() =>
               document.getElementById("hanh-trinh")?.scrollIntoView({ behavior: "smooth" })
