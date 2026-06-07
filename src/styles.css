@@ -139,8 +139,45 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
+
+@utility gradient-ocean {
+  background-image: linear-gradient(135deg, #0a66c2 0%, #38bdf8 100%);
+}
+
+@utility gradient-ocean-text {
+  background-image: linear-gradient(120deg, #0a66c2 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass {
+  background-color: color-mix(in oklab, white 65%, transparent);
+  backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in oklab, white 60%, transparent);
+}
+
+@utility shadow-soft {
+  box-shadow: 0 10px 40px -12px color-mix(in oklab, #0a66c2 28%, transparent);
+}
+
+@utility shadow-glow {
+  box-shadow: 0 20px 60px -15px color-mix(in oklab, #0a66c2 40%, transparent);
+}
+
