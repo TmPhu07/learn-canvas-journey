@@ -4,7 +4,6 @@ on:
   push:
     branches: "main"
 
-# Cấp quyền cho GitHub Actions deploy web
 permissions:
   contents: read
   pages: write
@@ -18,7 +17,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps: deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,7 +38,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Thư mục xuất ra sau khi build (thường là dist hoặc .output/public)
           path: ./dist 
 
       - name: Deploy to GitHub Pages
