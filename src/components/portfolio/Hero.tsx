@@ -68,16 +68,7 @@ export function Hero() {
           {profile.intro}
         </motion.p>
 
-        <motion.div variants={item} className="mt-8 flex flex-wrap justify-center gap-3">
-          {profile.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-2xl border border-border bg-card px-5 py-2.5 text-sm font-bold text-foreground shadow-soft transition-transform hover:-translate-y-1"
-            >
-              {tag}
-            </span>
-          ))}
-        </motion.div>
+
 
 
         <motion.div variants={item} className="mt-10">
