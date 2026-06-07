@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Cpu, Brain, Gamepad2, Wrench } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { profile } from "@/data/portfolioData";
 
-const tagIcons: Record<string, typeof Cpu> = {
-  "Công nghệ": Cpu,
-  AI: Brain,
-  Pokémon: Gamepad2,
-  "Digital Tools": Wrench,
-};
 
 const container = {
   hidden: {},
