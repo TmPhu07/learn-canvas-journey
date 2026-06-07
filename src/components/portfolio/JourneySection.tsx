@@ -15,7 +15,6 @@ import {
   Trophy,
   Lightbulb,
   FileText,
-  ExternalLink,
   type LucideIcon,
 } from "lucide-react";
 import { assignments, type Assignment } from "@/data/portfolioData";
