@@ -172,25 +172,30 @@ function AssignmentModal({
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href={assignment.pdfLink}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl gradient-ocean px-5 py-3 text-sm font-bold text-white shadow-soft transition-transform hover:-translate-y-0.5"
-              >
-                <FileText className="h-4 w-4" />
-                Xem file PDF
-              </a>
-              <a
-                href={assignment.driveLink}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl border border-border bg-card px-5 py-3 text-sm font-bold text-foreground shadow-soft transition-transform hover:-translate-y-0.5"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Google Drive
-              </a>
+              {assignment.pdfLink && assignment.pdfLink !== "#" && (
+                <a
+                  href={assignment.pdfLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-2xl gradient-ocean px-5 py-3 text-sm font-bold text-white shadow-soft transition-transform hover:-translate-y-0.5"
+                >
+                  <FileText className="h-4 w-4" />
+                  Xem file PDF
+                </a>
+              )}
+              {assignment.driveLink && assignment.driveLink !== "#" && (
+                <a
+                  href={assignment.driveLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-border bg-card px-5 py-3 text-sm font-bold text-foreground shadow-soft transition-transform hover:-translate-y-0.5"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Google Drive
+                </a>
+              )}
             </div>
+
           </motion.div>
         </motion.div>
       )}
